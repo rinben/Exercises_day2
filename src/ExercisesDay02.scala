@@ -4,6 +4,10 @@ object ExercisesDay02 {
     println(palindrome("Sit on a potato pan, Otis."))
     println(palindrome("Napa racecar a pan"))
     println(palindrome("Pusssy"))
+    
+    
+    
+    
     //Exercise 02
 
     //Exercise 03
@@ -43,6 +47,34 @@ object ExercisesDay02 {
     }
     end
   }
+  
+  //Tiffany's palindrome function:
+    def palindrome(str:String): Boolean = {
+
+    var delimArray = Array(',',' ', '.', '/', '"')
+    var newArray = str.split(delimArray)
+    var newStr = new String()
+    for (i <- newArray){
+      newStr = newStr + i.toLowerCase
+    }
+
+    return isPalindrome(newStr)
+
+  }
+
+   def isPalindrome(newStr: String): Boolean ={
+    if (newStr.length == 1 || newStr.length == 0) {
+      return true
+    }
+    else {
+      var lastIndex = newStr.length-1
+      if (newStr(0) == newStr(lastIndex)){
+        isPalindrome(newStr.substring(1,lastIndex-1))
+        return true
+      }
+      return false
+    }
+
 
 
   //Exercise 03

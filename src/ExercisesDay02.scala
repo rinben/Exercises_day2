@@ -3,6 +3,8 @@ object ExercisesDay02 {
     //Exercise 01
     println(palindrome("Sit on a potato pan, Otis."))
     println(palindrome("Napa racecar a pan"))
+    println(Tiffany_palindrome("Sit on a potato pan, Otis."))
+    println(Tiffany_palindrome("Napa racecar a pan"))
     println()
     //Exercise 02
     println(fib_seq(20))
@@ -48,6 +50,33 @@ object ExercisesDay02 {
       }
     }
     end
+  }
+  //Tiffany's palindrome function:
+  def Tiffany_palindrome(str:String): Boolean = {
+
+    var delimArray = Array(',',' ', '.', '/', '"')
+    var newArray = str.split(delimArray)
+    var newStr = new String()
+    for (i <- newArray){
+      newStr = newStr + i.toLowerCase
+    }
+
+    isPalindrome(newStr)
+
+  }
+
+  def isPalindrome(newStr: String): Boolean = {
+    if (newStr.length == 1 || newStr.length == 0) {
+      true
+    }
+    else {
+      var lastIndex = newStr.length - 1
+      if (newStr(0) == newStr(lastIndex)) {
+        isPalindrome(newStr.substring(1, lastIndex - 1))
+        return true
+      }
+      false
+    }
   }
   //Exercise 02
   def fib_seq(limit:Int):String={

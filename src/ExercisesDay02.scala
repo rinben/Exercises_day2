@@ -5,7 +5,10 @@ object ExercisesDay02 {
     println(palindrome("Napa racecar a pan"))
     println(palindrome("Pusssy"))
     //Exercise 02
-
+    println(fib_seq(20))
+    println(fib_seq(5))
+    println(fib_seq(1))
+    println(fib_seq(71))
     //Exercise 03
 
     //Exercise 04
@@ -43,9 +46,29 @@ object ExercisesDay02 {
     }
     end
   }
-
+  //Exercise 02
+  def fib_seq(limit:Int):String={
+    var Fib=List(1,1)
+    var n=1
+    do {
+      if (limit==1){
+        return "The Fibonacci sequence is: %s %d\n".format(1,1)
+      }
+      else if (limit==0){
+        return "The Fibonacci sequence is: \n"
+      }
+      Fib=Fib:+(Fib(n)+Fib(n-1))
+      n=n+1
+    } while ((Fib(n)+Fib(n-1))<=limit)
+    print("The Fibonacci sequence is: ")
+    for (i<-Fib){
+      print(i+" ")
+    }
+    "\n"
+  }
 
   //Exercise 03
+
 
   //Exercise 04
 

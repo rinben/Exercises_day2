@@ -116,12 +116,13 @@ object ExercisesDay02 {
   }
   //Exercise 04
   def memberNames():Any={
-    val name=scala.io.StdIn.readLine("Member name (When Finished with names, type 'done'): ").toString
+    val name=scala.io.StdIn.readLine("Member name (When Finished with names, press enter): ").toString
     var nameList=List[String]()
     nameList = nameList :+ name
-    for (i<-nameList){
-      "The members are: "+i
+    if (!name.isEmpty){
+      memberNames()
     }
+    "The members are: %s".format(nameList)
   }
   //Exercise 05
 

@@ -3,16 +3,19 @@ object ExercisesDay02 {
     //Exercise 01
     println(palindrome("Sit on a potato pan, Otis."))
     println(palindrome("Napa racecar a pan"))
-    println(palindrome("Pusssy"))
+    println()
     //Exercise 02
     println(fib_seq(20))
     println(fib_seq(5))
     println(fib_seq(1))
     println(fib_seq(71))
+    println()
     //Exercise 03
-
+    println(reversedString("hello world it is I Ben Rinaldo"))
+    println(reversedString("My name is Jim"))
+    println()
     //Exercise 04
-
+    println(memberNames())
     //Exercise 05
 
     //Exercise 06
@@ -68,10 +71,29 @@ object ExercisesDay02 {
   }
 
   //Exercise 03
-
-
+  def reversedString(str:String):String={
+    val badStr=List(',','.','!',';','?',':')
+    var newstring=""
+    for (j<-str if !(badStr contains j)){
+      newstring=newstring+j
+    }
+    newstring=newstring.toLowerCase()
+    val sub=newstring.split(" ")
+    var nsub=""
+    for (i<-sub){
+      nsub=i+" "+nsub
+    }
+    nsub+"\n"
+  }
   //Exercise 04
-
+  def memberNames():Any={
+    val name=scala.io.StdIn.readLine("Member name (When Finished with names, type 'done'): ").toString
+    var nameList=List[String]()
+    nameList = nameList :+ name
+    for (i<-nameList){
+      "The members are: "+i
+    }
+  }
   //Exercise 05
 
   //Exercise 06

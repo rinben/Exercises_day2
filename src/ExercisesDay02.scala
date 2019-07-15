@@ -33,9 +33,12 @@ object ExercisesDay02 {
     //println(nextDay())
     println()
     //Exercise 09
-
+    println(distinctVal(Map("hello"->3,"world"->5,"I"->5,"am"->3,"Ben"->3)))
+    println()
     //Exercise 10
-
+    println(additionVector(Map(1->3,2->3),Map(1->4,3->5)))
+    println(dotProduct(Map(1->3,2->3,6->2),Map(1->4,3->5,6->2)))
+    println()
   }
   //Exercise 01
   def palindrome(str:String):String = {
@@ -108,17 +111,17 @@ object ExercisesDay02 {
   //Exercise 03
   def reversedString(str:String):String={
     val badStr=List(',','.','!',';','?',':')
-    var newstring=""
+    var newString=""
     for (j<-str if !(badStr contains j)){
-      newstring=newstring+j
+      newString=newString+j
     }
-    newstring=newstring.toLowerCase()
-    val sub=newstring.split(" ")
-    var nsub=""
+    newString=newString.toLowerCase()
+    val sub=newString.split(" ")
+    var nSub=""
     for (i<-sub){
-      nsub=i+" "+nsub
+      nSub=i+" "+nSub
     }
-    nsub+"\n"
+    nSub+"\n"
   }
   //Exercise 04
   var nameList:List[String]=List[String]()
@@ -241,8 +244,47 @@ object ExercisesDay02 {
     s"The next day is $month/$day/$year."
   }
   //Exercise 09
-
+  def distinctVal(m:Map[String, Int]):Int={
+    var total=0
+    for (i<-m.values){
+      var count=0
+      for (j<-m.values){
+        if (j==i){
+          count=count+1
+        }
+      }
+      if (!(count>1)){
+        total=total+1
+      }
+    }
+    total
+  }
   //Exercise 10
-
+  def additionVector(m1:Map[Int,Int],m2:Map[Int,Int]):Map[Int,Int]={
+    var m3=Map[Int,Int]()
+    for (i<-m1.keys){
+      if (m2.contains(i)) {
+        m3 = m3 + (i -> (m1(i) + m2(i)))
+      }
+      else {
+        m3 = m3 + (i -> m1(i))
+      }
+    }
+    for (j<-m2.keys) {
+      if (!m3.contains(j)){
+        m3 = m3 + (j -> m2(j))
+      }
+    }
+    m3
+  }
+  def dotProduct(m1:Map[Int,Int],m2:Map[Int,Int]):Int={
+    var m3=Map[Int,Int]()
+    for (i<-m1.keys) {
+      if (m2.contains(i)) {
+        m3 = m3 + (i -> (m1(i) * m2(i)))
+      }
+    }
+    m3.values.sum
+  }
 
 }

@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExercisesDay02/ExercisesDay02$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExercisesDay02/ExercisesDay02$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ExercisesDay02/ExercisesDay02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ExercisesDay02/ExercisesDay02.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExercisesDay02.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExercisesDay02.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ExercisesDay02.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-309">
-              <caret line="210" column="121" selection-start-line="210" selection-start-column="121" selection-end-line="210" selection-end-column="121" />
+            <state relative-caret-position="135">
+              <caret line="243" selection-start-line="243" selection-end-line="243" />
             </state>
           </provider>
         </entry>
@@ -135,6 +134,14 @@
       <option name="presentableId" value="Default" />
       <updated>1562777196240</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;Did more problems&quot;">
+      <created>1563206103388</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563206103388</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -169,6 +176,10 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Did more problems&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Did more problems&quot;" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../cse116-Ben-s-Edits/src/main/scala/lab_02.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -186,8 +197,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ExercisesDay02.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-309">
-          <caret line="210" column="121" selection-start-line="210" selection-start-column="121" selection-end-line="210" selection-end-column="121" />
+        <state relative-caret-position="135">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
         </state>
       </provider>
     </entry>
